@@ -267,3 +267,195 @@ footer a:hover {
         font-size: 16px; /* Ajuste no tamanho do texto em telas menores */
     }
 }
+
+/* Media Query para smartphones em geral */
+@media (max-width: 768px) {
+    /* Ajustes gerais */
+    .caixa-principal {
+        background-size: auto; /* Ajusta a imagem de fundo para não cortar em telas pequenas */
+    }
+
+    nav ul li {
+        font-size: 20px; /* Reduz o tamanho do texto na navegação para telas menores */
+        margin-right: 15px; /* Reduz o espaço entre os links */
+    }
+
+    .meu-nome h1 {
+        font-size: 40px; /* Reduz o tamanho do nome */
+    }
+
+    .meu-nome h3 {
+        font-size: 18px; /* Reduz o tamanho da profissão */
+    }
+
+    .meu-nome-imagens img {
+        width: 40px; /* Ajusta o tamanho das imagens para dispositivos móveis */
+    }
+
+    section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 15%; /* Ajusta o padding nas telas menores */
+    }
+
+    section img {
+        height: 250px; /* Ajusta o tamanho da foto em dispositivos móveis */
+        margin-bottom: 20px; /* Adiciona mais espaço entre a foto e o texto */
+    }
+
+    section div h2 {
+        font-size: 40px; /* Ajusta o tamanho do título */
+    }
+
+    section div p {
+        font-size: 18px; /* Ajusta o tamanho da descrição */
+    }
+
+    /* Ajustes para os cards de projetos */
+    .card-projetos {
+        flex-direction: column; /* Exibe os cards em uma coluna */
+        align-items: center;
+        gap: 20px; /* Ajusta o espaçamento entre os cards */
+    }
+
+    .card {
+        width: 100%; /* Faz com que os cards ocupem 100% da largura disponível */
+        height: auto; /* Ajusta a altura do card */
+    }
+
+    .card img {
+        height: 120px; /* Ajusta a altura da imagem */
+    }
+
+    .card a {
+        font-size: 16px; /* Ajusta o tamanho do link */
+        padding: 10px 20px; /* Ajusta o padding do link */
+    }
+
+    footer {
+        padding: 20px; /* Ajusta o padding do rodapé */
+    }
+
+    footer h5 {
+        font-size: 22px; /* Ajusta o título do rodapé */
+    }
+
+    footer p {
+        font-size: 14px; /* Ajusta o texto do rodapé */
+    }
+}
+
+/* Media Query para dispositivos menores como iPhones (com largura de tela de até 375px) */
+@media (max-width: 375px) {
+    /* Ajusta a navegação */
+    nav ul li {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .meu-nome h1 {
+        font-size: 30px; /* Reduz ainda mais o tamanho do nome */
+    }
+
+    .meu-nome h3 {
+        font-size: 16px; /* Reduz o tamanho da profissão */
+    }
+
+    .meu-nome-imagens img {
+        width: 35px; /* Ajusta as imagens para dispositivos ainda menores */
+    }
+
+    section {
+        padding: 30px 10%; /* Ajusta o padding nas telas ainda menores */
+    }
+
+    section img {
+        height: 200px; /* Reduz a altura da imagem para telas menores */
+        margin-bottom: 10px;
+    }
+
+    section div h2 {
+        font-size: 32px; /* Ajusta o título */
+    }
+
+    section div p {
+        font-size: 16px; /* Ajusta o texto da descrição */
+    }
+
+    .card-projetos {
+        gap: 15px; /* Ajusta o espaçamento entre os cards */
+    }
+
+    .card {
+        width: 100%; /* Deixa os cards 100% da largura */
+        height: auto;
+    }
+
+    .card img {
+        height: 100px; /* Ajusta a altura da imagem */
+    }
+
+    .card h5 {
+        font-size: 16px; /* Ajusta o tamanho do título do card */
+    }
+
+    .card p {
+        font-size: 12px; /* Ajusta o tamanho da descrição */
+    }
+
+    footer {
+        padding: 15px; /* Ajusta o padding no rodapé */
+    }
+
+    footer h5 {
+        font-size: 20px; /* Ajusta o título */
+    }
+
+    footer p {
+        font-size: 12px; /* Ajusta o texto do rodapé */
+    }
+
+    footer a {
+        font-size: 14px; /* Ajusta o tamanho do link */
+    }
+}
+
+/* Media Query para dispositivos Android grandes ou iPhones grandes (com largura de tela até 414px) */
+@media (max-width: 414px) {
+    /* Ajusta o layout para telas ligeiramente maiores, como iPhone Plus ou Android grandes */
+    .meu-nome h1 {
+        font-size: 35px; /* Ajusta o nome */
+    }
+
+    .meu-nome h3 {
+        font-size: 20px; /* Ajusta o tamanho da profissão */
+    }
+
+    section img {
+        height: 300px; /* Ajusta a imagem */
+    }
+
+    .card-projetos {
+        gap: 25px; /* Ajusta o espaçamento entre os cards */
+    }
+
+    .card {
+        width: 45%; /* Exibe os cards em duas colunas em telas médias */
+    }
+
+    .card img {
+        height: 150px; /* Ajusta a imagem no card */
+    }
+
+    footer {
+        padding: 25px;
+    }
+
+    footer h5 {
+        font-size: 25px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+}
