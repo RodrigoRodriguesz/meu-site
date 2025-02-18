@@ -8,7 +8,7 @@
 .caixa-principal {
     height: 100vh;
     width: 100%; /* Ajustado para 100vw */
-/*     background-image: url('img/img_atual.png'); */
+    background-image: url('img/img_atual.png');
     background-color: #191919;
     background-size: cover; /* Adiciona esta linha para garantir que a imagem de fundo cubra todo o espaço */
     background-position: center;
