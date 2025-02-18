@@ -253,209 +253,124 @@ footer a:hover {
     border-radius: 50%;
 }
 
+/* Ajuste geral para dispositivos pequenos (max-width: 768px) */
 @media (max-width: 768px) {
-    .card-projetos {
-        flex-direction: column; /* Cards ficam em coluna em telas menores */
-        align-items: center;
-    }
-
-    footer h5 {
-        font-size: 25px; /* Ajuste no tamanho do título em telas menores */
-    }
-
-    footer p {
-        font-size: 16px; /* Ajuste no tamanho do texto em telas menores */
-    }
-}
-
-/* Media Query para smartphones em geral */
-@media (max-width: 768px) {
-    /* Ajustes gerais */
     .caixa-principal {
-        background-size: auto; /* Ajusta a imagem de fundo para não cortar em telas pequenas */
+        background-size: cover; /* Garante que a imagem de fundo cubra a tela */
+        padding: 0 10px; /* Evita que o conteúdo ultrapasse as bordas em telas menores */
     }
 
     nav ul li {
-        font-size: 20px; /* Reduz o tamanho do texto na navegação para telas menores */
-        margin-right: 15px; /* Reduz o espaço entre os links */
+        font-size: 20px; 
+        margin-right: 10px; /* Menor espaçamento entre links */
     }
 
     .meu-nome h1 {
-        font-size: 40px; /* Reduz o tamanho do nome */
-    }
-
-    .meu-nome h3 {
-        font-size: 18px; /* Reduz o tamanho da profissão */
-    }
-
-    .meu-nome-imagens img {
-        width: 40px; /* Ajusta o tamanho das imagens para dispositivos móveis */
+        font-size: 35px; /* Reduz o tamanho do nome */
     }
 
     section {
+        padding: 30px 10%; /* Ajusta o padding para evitar excesso de espaço */
         flex-direction: column;
-        text-align: center;
-        padding: 40px 15%; /* Ajusta o padding nas telas menores */
     }
 
     section img {
-        height: 250px; /* Ajusta o tamanho da foto em dispositivos móveis */
-        margin-bottom: 20px; /* Adiciona mais espaço entre a foto e o texto */
+        height: 250px;
     }
 
-    section div h2 {
-        font-size: 40px; /* Ajusta o tamanho do título */
-    }
-
-    section div p {
-        font-size: 18px; /* Ajusta o tamanho da descrição */
-    }
-
-    /* Ajustes para os cards de projetos */
     .card-projetos {
-        flex-direction: column; /* Exibe os cards em uma coluna */
+        flex-direction: column;
         align-items: center;
-        gap: 20px; /* Ajusta o espaçamento entre os cards */
+        gap: 10px; /* Menor espaço entre os cards */
     }
 
     .card {
-        width: 100%; /* Faz com que os cards ocupem 100% da largura disponível */
-        height: auto; /* Ajusta a altura do card */
-    }
-
-    .card img {
-        height: 120px; /* Ajusta a altura da imagem */
-    }
-
-    .card a {
-        font-size: 16px; /* Ajusta o tamanho do link */
-        padding: 10px 20px; /* Ajusta o padding do link */
+        width: 90%; /* Ajusta o tamanho dos cards para caber melhor */
+        height: auto; /* Ajusta a altura para que o conteúdo se ajuste bem */
     }
 
     footer {
-        padding: 20px; /* Ajusta o padding do rodapé */
+        padding: 20px 10px; /* Ajusta o padding no rodapé */
     }
 
     footer h5 {
-        font-size: 22px; /* Ajusta o título do rodapé */
-    }
-
-    footer p {
-        font-size: 14px; /* Ajusta o texto do rodapé */
+        font-size: 20px;
     }
 }
 
-/* Media Query para dispositivos menores como iPhones (com largura de tela de até 375px) */
+/* Ajuste para dispositivos com telas pequenas como iPhones e Androids pequenos (max-width: 375px) */
 @media (max-width: 375px) {
-    /* Ajusta a navegação */
+    .caixa-principal {
+        background-size: auto; /* Garante que a imagem de fundo não corte */
+    }
+
     nav ul li {
         font-size: 18px;
-        margin-right: 10px;
+        margin-right: 8px; /* Mais ajuste no espaçamento */
     }
 
     .meu-nome h1 {
-        font-size: 30px; /* Reduz ainda mais o tamanho do nome */
-    }
-
-    .meu-nome h3 {
-        font-size: 16px; /* Reduz o tamanho da profissão */
-    }
-
-    .meu-nome-imagens img {
-        width: 35px; /* Ajusta as imagens para dispositivos ainda menores */
-    }
-
-    section {
-        padding: 30px 10%; /* Ajusta o padding nas telas ainda menores */
+        font-size: 28px; /* Tamanho menor para telas pequenas */
     }
 
     section img {
-        height: 200px; /* Reduz a altura da imagem para telas menores */
-        margin-bottom: 10px;
+        height: 200px; /* Reduz a altura da imagem */
     }
 
     section div h2 {
-        font-size: 32px; /* Ajusta o título */
-    }
-
-    section div p {
-        font-size: 16px; /* Ajusta o texto da descrição */
+        font-size: 28px; /* Tamanho do título menor */
     }
 
     .card-projetos {
-        gap: 15px; /* Ajusta o espaçamento entre os cards */
+        gap: 5px; /* Reduz o espaçamento entre os cards */
     }
 
     .card {
-        width: 100%; /* Deixa os cards 100% da largura */
-        height: auto;
-    }
-
-    .card img {
-        height: 100px; /* Ajusta a altura da imagem */
-    }
-
-    .card h5 {
-        font-size: 16px; /* Ajusta o tamanho do título do card */
-    }
-
-    .card p {
-        font-size: 12px; /* Ajusta o tamanho da descrição */
+        width: 100%; /* Faz os cards ocuparem 100% da largura disponível */
+        height: auto; /* Ajusta a altura */
     }
 
     footer {
-        padding: 15px; /* Ajusta o padding no rodapé */
+        padding: 15px;
     }
 
     footer h5 {
-        font-size: 20px; /* Ajusta o título */
-    }
-
-    footer p {
-        font-size: 12px; /* Ajusta o texto do rodapé */
-    }
-
-    footer a {
-        font-size: 14px; /* Ajusta o tamanho do link */
+        font-size: 18px;
     }
 }
 
-/* Media Query para dispositivos Android grandes ou iPhones grandes (com largura de tela até 414px) */
+/* Ajustes para dispositivos Android maiores ou iPhones maiores (max-width: 414px) */
 @media (max-width: 414px) {
-    /* Ajusta o layout para telas ligeiramente maiores, como iPhone Plus ou Android grandes */
+    nav ul li {
+        font-size: 22px; /* Tamanho de fonte ajustado */
+    }
+
     .meu-nome h1 {
-        font-size: 35px; /* Ajusta o nome */
+        font-size: 33px; /* Ajusta o tamanho do nome */
     }
 
     .meu-nome h3 {
-        font-size: 20px; /* Ajusta o tamanho da profissão */
+        font-size: 18px; /* Ajusta a profissão */
     }
 
     section img {
-        height: 300px; /* Ajusta a imagem */
+        height: 280px; /* Ajusta o tamanho da imagem */
     }
 
     .card-projetos {
-        gap: 25px; /* Ajusta o espaçamento entre os cards */
+        gap: 15px; /* Ajusta o espaçamento */
     }
 
     .card {
-        width: 45%; /* Exibe os cards em duas colunas em telas médias */
-    }
-
-    .card img {
-        height: 150px; /* Ajusta a imagem no card */
+        width: 48%; /* Coloca dois cards por linha */
     }
 
     footer {
-        padding: 25px;
+        padding: 30px;
     }
 
     footer h5 {
-        font-size: 25px;
-    }
-
-    footer p {
-        font-size: 16px;
+        font-size: 22px; /* Ajuste no título do rodapé */
     }
 }
+
