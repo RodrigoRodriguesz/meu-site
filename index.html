@@ -18,12 +18,19 @@
         <nav>
             <h2 class="portfolio">Portfó<span>lio</span></h2>
             <ul>
-                <li><a href="#home">Home</a></li> <!-- Link para a Home -->
-                <li><a href="#sobre">Sobre</a></li> <!-- Link para a seção Sobre -->
-                <li><a href="#projetos">Projetos</a></li> <!-- Link para a seção Projetos -->
-                <li><a href="#contato">Fale comigo</a></li> <!-- Link para a seção Contato -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contato">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#sobre">Fale comigo</a></li>
             </ul>
+            <!-- Ícone de menu (hamburger) -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
+        
 
         <div id="home" class="meu-nome">
             <h1>Rodrigo <span>Rodrigues</span></h1>
@@ -43,10 +50,10 @@
         <img src="img/minha_foto.png" alt="Rodrigo Rodrigues">
         <div>
             <h2>Sobre Mim</h2>
-            <p>Eu sou um Analista de Dados, tenho experiência em desenvolvimento de Dashboards, Automação e Integração de Sistemas!</p>
+            <p>Eu sou um Analista de Dados, com experiência em desenvolvimento de Dashboards, Automação e Integração de Sistemas!</p>
             <a href="https://www.linkedin.com/in/rodrigosampaio-/" target="_blank">
                 <button>Entre em contato</button>
-              </a>
+            </a>
         </div>
     </section>
 
@@ -72,7 +79,7 @@
             <div class="card">
                 <img src="img/clickmed.jpeg" alt="Imagem do projeto">
                 <h5>ClickMed</h5>
-                <p>Protótio de uma automação de triagem para as unidades de Saúde. Usando diversos Frameworks e Python como a principal linguagem</p>
+                <p>Protótipo de uma automação de triagem para as unidades de Saúde. Usando diversos Frameworks e Python como a principal linguagem</p>
                 <a href="https://www.instagram.com/click.medical?igsh=NWpkNnpybjVxMjNt" target="_blank">Ver Projeto</a>
             </div>
         </div>
@@ -87,6 +94,13 @@
             <a href="https://www.linkedin.com/in/rodrigosampaio-/" target="_blank"><img src="img/logo-linkedin.svg" alt="LinkedIn"></a>
         </div>
     </footer>
+
+    <script>
+        function toggleMenu(){
+            const menu = document.querySelector('nav ul');
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
