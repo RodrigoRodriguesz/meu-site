@@ -5,6 +5,18 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+/* Para a imagem Django */
+.django-logo {
+    filter: invert(25%) sepia(100%) saturate(500%) hue-rotate(190deg); /* Exemplo de cor */
+}
+
+/* Para a imagem SQL */
+.sql-logo {
+    filter: invert(40%) sepia(100%) saturate(400%) hue-rotate(120deg);
+}
+
+/* Continue para os outros ícones da mesma forma */
+
 
 .caixa-principal {
     height: 100vh;
