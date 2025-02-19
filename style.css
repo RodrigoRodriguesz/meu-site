@@ -1,3 +1,4 @@
+/* CSS geral - sem alterações */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +8,9 @@
 
 .caixa-principal {
     height: 100vh;
-    width: 100%; /* Ajustado para 100vw */
-/*     background-image: url('img/img_atual.png'); */
+    width: 100%;
     background-color: #191919;
-    background-size: cover; /* Adiciona esta linha para garantir que a imagem de fundo cubra todo o espaço */
+    background-size: cover;
     background-position: center;
 }
 
@@ -41,22 +41,20 @@ li {
     cursor: pointer;
 }
 
-/* Estilo dos links na barra de navegação */
 nav ul li a {
-    color: #fff; /* Cor padrão */
-    text-decoration: none; /* Remove o sublinhado */
+    color: #fff;
+    text-decoration: none;
 }
 
 nav ul li a:hover {
-    color: #f9004d; /* Cor ao passar o mouse */
+    color: #f9004d;
     transition: 0.5s;
 }
 
-/* Remover o efeito de clique e foco, que gera o contorno azul */
 nav ul li a:focus, nav ul li a:active {
-    outline: none; /* Remove o contorno azul de foco */
-    box-shadow: none; /* Remove qualquer sombra */
-    color: #fff; /* Garante que a cor não mude */
+    outline: none;
+    box-shadow: none;
+    color: #fff;
 }
 
 .meu-nome {
@@ -79,11 +77,20 @@ h1 span {
     font-size: 25px;
 }
 
+/* Estilo inicial para as imagens */
 .meu-nome-imagens img {
-    width: 50px; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 0 10px; /* Espaçamento entre as imagens */
+    width: 50px; /* Tamanho inicial das imagens */
+    height: auto; /* Mantém a proporção */
+    margin: 0 10px;
     margin-top: 15px;
+    opacity: 1; /* Imagem visível */
+    transition: transform 0.3s ease-in-out; /* Transição suave para expansão */
+}
+
+/* Efeito de Hover (expansão) */
+.meu-nome-imagens img:hover {
+    transform: scale(1.5); /* Expande a imagem para 1.5x seu tamanho original */
+    opacity: 1; /* Imagem visível */
 }
 
 section {
@@ -132,16 +139,16 @@ section button:hover {
 .projetos {
     background-color: #191919;
     padding-top: 50px;
-    padding-bottom: 0; /* Removido o padding-bottom que estava criando o espaço branco */
+    padding-bottom: 0;
     text-align: center;
-    margin: 0; /* Removido margens extras */
+    margin: 0;
 }
 
 .projetos h2 {
     color: #fff;
     font-size: 75px;
     text-align: center;
-    margin-bottom: 40px; /* Mantido o espaço abaixo do título */
+    margin-bottom: 40px;
 }
 
 h2 {
@@ -154,7 +161,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    flex-wrap: wrap; /* Permite o quebra de linha se necessário */
+    flex-wrap: wrap;
     margin-top: 40px;
     justify-content: center;
 }
@@ -162,7 +169,7 @@ h2 {
 .card {
     background-color: #1e1e1e;
     width: 300px;
-    height: 400px; /* Ajustei a altura do card */
+    height: 400px;
     border-radius: 15px;
     padding: 20px;
     text-align: center;
@@ -171,13 +178,13 @@ h2 {
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Isso ajuda a distribuir o conteúdo dentro do card */
+    justify-content: space-between;
 }
 
 .card img {
     height: 150px;
     width: auto;
-    object-fit: contain; /* Ajuste para garantir que a imagem se encaixe bem no card */
+    object-fit: contain;
     margin-bottom: 15px;
 }
 
@@ -212,18 +219,18 @@ h2 {
 }
 
 footer {
-    background-color: #1e1e1e; /* Fundo escuro, semelhante ao das cards */
-    padding: 40px 20px; /* Espaçamento interno */
+    background-color: #1e1e1e;
+    padding: 40px 20px;
     text-align: center;
     color: #fff;
-    margin-top: 40px; /* Espaço acima do rodapé */
-    border-top: 2px solid #f9004d; /* Linha separadora no topo do rodapé */
+    margin-top: 40px;
+    border-top: 2px solid #f9004d;
 }
 
 footer h5 {
     color: #fff;
     font-size: 30px;
-    margin-bottom: 15px; /* Espaçamento abaixo do título */
+    margin-bottom: 15px;
 }
 
 footer p {
@@ -253,24 +260,66 @@ footer a:hover {
     border-radius: 50%;
 }
 
-/* Ajuste geral para dispositivos pequenos (max-width: 768px) */
-@media (max-width: 768px) {
+/* Estilo para o menu em telas pequenas */
+@media screen and (max-width: 768px) {
     .caixa-principal {
-        background-size: cover; /* Garante que a imagem de fundo cubra a tela */
-        padding: 0 10px; /* Evita que o conteúdo ultrapasse as bordas em telas menores */
+        padding: 0 10px; 
     }
 
+    nav ul {
+        display: none; /* Inicialmente oculto */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav ul.active {
+        display: flex; /* Exibe a lista quando a classe active for adicionada */
+    }
+
+    /* Ícone do menu (hamburger) */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: relative;
+    top: -5px; /* Ajusta a posição inicial do ícone (subindo um pouco) */
+    transition: top 0.3s ease-in-out; /* Transição suave para o efeito */
+}
+
+/* Barras do ícone de menu */
+.menu-icon .bar {
+    width: 30px; /* Largura das barras */
+    height: 4px; /* Espessura das barras */
+    background-color: #f9004d;
+    border-radius: 10px; /* Bordas arredondadas para um design mais suave */
+    transition: all 0.3s ease-in-out; /* Transição suave para as transformações */
+}
+
+/* Efeito de hover (ao passar o mouse) */
+.menu-icon:hover .bar {
+    transform: scaleX(1.2); /* Aumenta ligeiramente a largura das barras */
+}
+
+/* Animando o ícone de menu quando o hover ocorre */
+.menu-icon:hover {
+    top: -10px; /* Sobe o ícone quando o mouse passar sobre ele */
+}
+
+
     nav ul li {
-        font-size: 20px; 
-        margin-right: 10px; /* Menor espaçamento entre links */
+        font-size: 20px;
+        margin-right: 10px;
     }
 
     .meu-nome h1 {
-        font-size: 35px; /* Reduz o tamanho do nome */
+        font-size: 35px;
     }
 
     section {
-        padding: 30px 10%; /* Ajusta o padding para evitar excesso de espaço */
+        padding: 30px 10%;
         flex-direction: column;
     }
 
@@ -281,96 +330,19 @@ footer a:hover {
     .card-projetos {
         flex-direction: column;
         align-items: center;
-        gap: 10px; /* Menor espaço entre os cards */
+        gap: 10px;
     }
 
     .card {
-        width: 90%; /* Ajusta o tamanho dos cards para caber melhor */
-        height: auto; /* Ajusta a altura para que o conteúdo se ajuste bem */
+        width: 90%;
+        height: auto;
     }
 
     footer {
-        padding: 20px 10px; /* Ajusta o padding no rodapé */
+        padding: 20px 10%;
     }
 
     footer h5 {
         font-size: 20px;
     }
 }
-
-/* Ajuste para dispositivos com telas pequenas como iPhones e Androids pequenos (max-width: 375px) */
-@media (max-width: 375px) {
-    .caixa-principal {
-        background-size: auto; /* Garante que a imagem de fundo não corte */
-    }
-
-    nav ul li {
-        font-size: 18px;
-        margin-right: 8px; /* Mais ajuste no espaçamento */
-    }
-
-    .meu-nome h1 {
-        font-size: 28px; /* Tamanho menor para telas pequenas */
-    }
-
-    section img {
-        height: 200px; /* Reduz a altura da imagem */
-    }
-
-    section div h2 {
-        font-size: 28px; /* Tamanho do título menor */
-    }
-
-    .card-projetos {
-        gap: 5px; /* Reduz o espaçamento entre os cards */
-    }
-
-    .card {
-        width: 100%; /* Faz os cards ocuparem 100% da largura disponível */
-        height: auto; /* Ajusta a altura */
-    }
-
-    footer {
-        padding: 15px;
-    }
-
-    footer h5 {
-        font-size: 18px;
-    }
-}
-
-/* Ajustes para dispositivos Android maiores ou iPhones maiores (max-width: 414px) */
-@media (max-width: 414px) {
-    nav ul li {
-        font-size: 22px; /* Tamanho de fonte ajustado */
-    }
-
-    .meu-nome h1 {
-        font-size: 33px; /* Ajusta o tamanho do nome */
-    }
-
-    .meu-nome h3 {
-        font-size: 18px; /* Ajusta a profissão */
-    }
-
-    section img {
-        height: 280px; /* Ajusta o tamanho da imagem */
-    }
-
-    .card-projetos {
-        gap: 15px; /* Ajusta o espaçamento */
-    }
-
-    .card {
-        width: 48%; /* Coloca dois cards por linha */
-    }
-
-    footer {
-        padding: 30px;
-    }
-
-    footer h5 {
-        font-size: 22px; /* Ajuste no título do rodapé */
-    }
-}
-
